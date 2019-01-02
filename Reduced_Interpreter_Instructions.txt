@@ -1,0 +1,39 @@
+Mark Fraser
+989279438
+m_fraser3@u.pacific.edu
+
+Assignment 6:  Building the Reduced Interpreter
+
+Instructions to use TestDriver.java
+
+- Compiler used:
+	Java 8 major version 52
+	jdk1.8.0_144 (if downloaded and installed straight to computer, directory most likely would be:)
+		C:\Program Files\Java\jdk1.8.0_144\bin
+
+	Troubleshooting:
+		I had an issue compiling for the first time on the command line because I was using a JRE rather
+		than a JDK, but once I added to my Path variable in Control Panel > System > Advanced System Settings
+		> Environment Variables the above directory, the javac command worked so I could compile and run 
+		on the command line
+	
+
+- From the CommandLine in Windows 10 (Verified):
+	1.  Compiled the file TestDriver.java using the command line (while in the file's directory):
+		javac *.java
+	    (Note:  because I have included the .class files for all the .java files, you may not have to compile at
+	    all in order to run the program, such that you can try skipping to step 2)
+	2.  It is my understanding the we need to support blank lines in the file.  Therefore, for this assignment, you can no longer
+		write from the command line, but instead must include the text document as an input string.  To run the program,
+		use the command:
+			java TestDriver <test_program.txt>
+		
+		The program will properly handle the text file and run it.
+
+- Clarifications of Ambiguity:
+	1.  For simplicity, all numbers that have operations performed on them instantly casts the number to a Double.
+	2.  If you somehow break the interpreter such that a null input is generated, the symbol table will report a null value, though
+		this is not anticipated, as I have not encountered an error with a correct program yet.
+	3.  When using the rel_op option in the grammar, the values "3" and "3.0" are not considered equal, because the == operator does not
+		work with doubles in Java.  I therefore had to use the String.equals() method, which means integer numbers that aren't operated on will
+		not be equal to integer numbers that are operated on.

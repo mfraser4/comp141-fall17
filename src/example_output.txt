@@ -1,0 +1,24 @@
+TOKENS:
+IDENTIFIER: apple
+PUNCTUATION: :=
+INTEGER: 6
+PUNCTUATION: ;
+
+
+PARSE TREE:
+program
+    vars
+    funcs
+    cmds
+        cmd
+            id
+                apple
+            :=
+            expr
+                simple_expr
+                    term
+                        factor
+                            constant
+                                6
+FINAL SYMBOL TABLE:
+apple : 6.0

@@ -1,0 +1,4 @@
+cherry := (a<=b)and(c>=d);
+z := not x != 6;
+z := (not x) != 6;
+z := not (x != 6);
